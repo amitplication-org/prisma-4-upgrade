@@ -19,6 +19,7 @@ import { CustomerService } from "../customer.service";
 const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
+  cnumber: "exampleCnumber",
   createdAt: new Date(),
   email: "exampleEmail",
   firstName: "exampleFirstName",
@@ -28,6 +29,7 @@ const CREATE_INPUT = {
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
+  cnumber: "exampleCnumber",
   createdAt: new Date(),
   email: "exampleEmail",
   firstName: "exampleFirstName",
@@ -38,6 +40,7 @@ const CREATE_RESULT = {
 };
 const FIND_MANY_RESULT = [
   {
+    cnumber: "exampleCnumber",
     createdAt: new Date(),
     email: "exampleEmail",
     firstName: "exampleFirstName",
@@ -48,6 +51,7 @@ const FIND_MANY_RESULT = [
   },
 ];
 const FIND_ONE_RESULT = {
+  cnumber: "exampleCnumber",
   createdAt: new Date(),
   email: "exampleEmail",
   firstName: "exampleFirstName",
@@ -176,6 +180,28 @@ describe("Customer", () => {
         ...FIND_ONE_RESULT,
         createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
         updatedAt: FIND_ONE_RESULT.updatedAt.toISOString(),
+      });
+  });
+
+  test("POST /customers existing resource", async () => {
+    let agent = request(app.getHttpServer());
+    await agent
+      .post("/customers")
+      .send(CREATE_INPUT)
+      .expect(HttpStatus.CREATED)
+      .expect({
+        ...CREATE_RESULT,
+        createdAt: CREATE_RESULT.createdAt.toISOString(),
+        updatedAt: CREATE_RESULT.updatedAt.toISOString(),
+      })
+      .then(function () {
+        agent
+          .post("/customers")
+          .send(CREATE_INPUT)
+          .expect(HttpStatus.CONFLICT)
+          .expect({
+            statusCode: HttpStatus.CONFLICT,
+          });
       });
   });
 
