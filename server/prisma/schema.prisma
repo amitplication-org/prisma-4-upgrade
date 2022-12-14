@@ -26,6 +26,7 @@ model Order {
   customerId String?
   discount   Float?
   id         String    @id @default(cuid())
+  identifier String?   @unique
   product    Product[]
   quantity   Int?
   totalPrice Int?
@@ -35,6 +36,7 @@ model Order {
 model Customer {
   address   Address? @relation(fields: [addressId], references: [id])
   addressId String?
+  cnumber   String?  @unique
   createdAt DateTime @default(now())
   email     String?
   firstName String?

@@ -7,6 +7,7 @@ import {
   ReferenceInput,
   SelectInput,
   NumberInput,
+  TextInput,
   ReferenceArrayInput,
   SelectArrayInput,
 } from "react-admin";
@@ -26,6 +27,7 @@ export const OrderEdit = (props: EditProps): React.ReactElement => {
           <SelectInput optionText={CustomerTitle} />
         </ReferenceInput>
         <NumberInput label="Discount" source="discount" />
+        <TextInput label="identifier" source="identifier" />
         <ReferenceArrayInput
           source="product"
           reference="Product"

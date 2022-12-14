@@ -4,6 +4,7 @@ import { ProductCreateNestedManyWithoutOrdersInput } from "./ProductCreateNested
 export type OrderCreateInput = {
   customer?: CustomerWhereUniqueInput | null;
   discount?: number | null;
+  identifier?: string | null;
   product?: ProductCreateNestedManyWithoutOrdersInput;
   quantity?: number | null;
   totalPrice?: number | null;

@@ -23,6 +23,7 @@ export const OrderShow = (props: ShowProps): React.ReactElement => {
         </ReferenceField>
         <TextField label="Discount" source="discount" />
         <TextField label="ID" source="id" />
+        <TextField label="identifier" source="identifier" />
         <TextField label="Quantity" source="quantity" />
         <TextField label="Total Price" source="totalPrice" />
         <DateField source="updatedAt" label="Updated At" />
