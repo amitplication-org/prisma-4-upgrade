@@ -22,6 +22,7 @@ import { Type } from "class-transformer";
 import { Profile } from "../../profile/base/Profile";
 import { GraphQLJSON } from "graphql-type-json";
 import { JsonValue } from "type-fest";
+
 @ObjectType()
 class User {
   @ApiProperty({
@@ -94,4 +95,5 @@ class User {
   @Field(() => String)
   username!: string;
 }
+
 export { User };
