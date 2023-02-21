@@ -111,4 +111,4 @@ class CustomerWhereInput {
   phone?: StringNullableFilter;
 }
 
-export { CustomerWhereInput };
+export { CustomerWhereInput as CustomerWhereInput };

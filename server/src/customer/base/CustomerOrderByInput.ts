@@ -100,4 +100,4 @@ class CustomerOrderByInput {
   updatedAt?: SortOrder;
 }
 
-export { CustomerOrderByInput };
+export { CustomerOrderByInput as CustomerOrderByInput };

@@ -30,4 +30,4 @@ class ProfileUpdateInput {
   user?: UserWhereUniqueInput | null;
 }
 
-export { ProfileUpdateInput };
+export { ProfileUpdateInput as ProfileUpdateInput };

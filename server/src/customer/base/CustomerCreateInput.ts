@@ -98,4 +98,4 @@ class CustomerCreateInput {
   phone?: string | null;
 }
 
-export { CustomerCreateInput };
+export { CustomerCreateInput as CustomerCreateInput };

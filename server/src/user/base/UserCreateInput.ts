@@ -78,4 +78,4 @@ class UserCreateInput {
   username!: string;
 }
 
-export { UserCreateInput };
+export { UserCreateInput as UserCreateInput };

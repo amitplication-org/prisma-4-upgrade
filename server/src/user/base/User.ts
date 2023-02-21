@@ -96,4 +96,4 @@ class User {
   username!: string;
 }
 
-export { User };
+export { User as User };

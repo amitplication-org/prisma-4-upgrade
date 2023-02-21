@@ -98,4 +98,4 @@ class CustomerUpdateInput {
   phone?: string | null;
 }
 
-export { CustomerUpdateInput };
+export { CustomerUpdateInput as CustomerUpdateInput };
