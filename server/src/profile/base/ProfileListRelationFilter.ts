@@ -53,4 +53,4 @@ class ProfileListRelationFilter {
   })
   none?: ProfileWhereInput;
 }
-export { ProfileListRelationFilter };
+export { ProfileListRelationFilter as ProfileListRelationFilter };

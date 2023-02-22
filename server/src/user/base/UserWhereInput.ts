@@ -17,6 +17,7 @@ import { IsOptional, ValidateNested } from "class-validator";
 import { StringFilter } from "../../util/StringFilter";
 import { ProfileWhereUniqueInput } from "../../profile/base/ProfileWhereUniqueInput";
 import { Profile } from "../../profile/base/Profile";
+
 @InputType()
 class UserWhereInput {
   @ApiProperty({
@@ -75,4 +76,5 @@ class UserWhereInput {
   })
   username?: StringFilter;
 }
-export { UserWhereInput };
+
+export { UserWhereInput as UserWhereInput };

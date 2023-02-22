@@ -18,4 +18,4 @@ class ProfileFindUniqueArgs {
   where!: ProfileWhereUniqueInput;
 }
 
-export { ProfileFindUniqueArgs };
+export { ProfileFindUniqueArgs as ProfileFindUniqueArgs };

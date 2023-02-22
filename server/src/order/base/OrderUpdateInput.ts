@@ -21,6 +21,7 @@ import {
 } from "class-validator";
 import { Type } from "class-transformer";
 import { ProductUpdateManyWithoutOrdersInput } from "./ProductUpdateManyWithoutOrdersInput";
+
 @InputType()
 class OrderUpdateInput {
   @ApiProperty({
@@ -91,4 +92,5 @@ class OrderUpdateInput {
   })
   totalPrice?: number | null;
 }
-export { OrderUpdateInput };
+
+export { OrderUpdateInput as OrderUpdateInput };

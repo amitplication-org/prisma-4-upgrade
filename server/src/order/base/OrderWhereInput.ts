@@ -19,6 +19,7 @@ import { StringFilter } from "../../util/StringFilter";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { ProductListRelationFilter } from "../../product/base/ProductListRelationFilter";
 import { IntNullableFilter } from "../../util/IntNullableFilter";
+
 @InputType()
 class OrderWhereInput {
   @ApiProperty({
@@ -100,4 +101,5 @@ class OrderWhereInput {
   })
   totalPrice?: IntNullableFilter;
 }
-export { OrderWhereInput };
+
+export { OrderWhereInput as OrderWhereInput };

@@ -17,6 +17,7 @@ import { Type } from "class-transformer";
 import { Profile } from "../../profile/base/Profile";
 import { GraphQLJSON } from "graphql-type-json";
 import { InputJsonValue } from "../../types";
+
 @InputType()
 class UserUpdateInput {
   @ApiProperty({
@@ -85,4 +86,5 @@ class UserUpdateInput {
   })
   username?: string;
 }
-export { UserUpdateInput };
+
+export { UserUpdateInput as UserUpdateInput };

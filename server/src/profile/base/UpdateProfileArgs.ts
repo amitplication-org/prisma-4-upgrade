@@ -21,4 +21,4 @@ class UpdateProfileArgs {
   data!: ProfileUpdateInput;
 }
 
-export { UpdateProfileArgs };
+export { UpdateProfileArgs as UpdateProfileArgs };

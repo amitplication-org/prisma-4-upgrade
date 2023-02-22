@@ -55,4 +55,4 @@ class ProfileOrderByInput {
   userId?: SortOrder;
 }
 
-export { ProfileOrderByInput };
+export { ProfileOrderByInput as ProfileOrderByInput };

@@ -14,6 +14,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import { UserWhereUniqueInput } from "../../user/base/UserWhereUniqueInput";
 import { ValidateNested, IsOptional } from "class-validator";
 import { Type } from "class-transformer";
+
 @InputType()
 class ProfileCreateInput {
   @ApiProperty({
@@ -28,4 +29,5 @@ class ProfileCreateInput {
   })
   user?: UserWhereUniqueInput | null;
 }
-export { ProfileCreateInput };
+
+export { ProfileCreateInput as ProfileCreateInput };
